@@ -7,7 +7,6 @@ O protótipo do projeto está disponível no [Figma](https://www.figma.com/desig
 
 ## 🚀 Tecnologias Utilizadas  
 - **Angular 16**: [Documentação Oficial](https://angular.io/docs)  
-- **Docker**: Configuração planejada para facilitar o desenvolvimento e a execução do projeto.  
 
 ## ✨ Funcionalidades  
 - **Cadastro de Usuário**: Registre-se para acessar o sistema.  
