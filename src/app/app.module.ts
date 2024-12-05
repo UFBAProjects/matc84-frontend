@@ -11,9 +11,11 @@ import { TelaCadastroUsuarioComponent } from './tela-cadastro-usuario/tela-cadas
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
+import { BotaoComponent } from './barra-superior/botao/botao.component';
 
 @NgModule({
-  declarations: [AppComponent, TelaCadastroUsuarioComponent],
+  declarations: [AppComponent, TelaCadastroUsuarioComponent, BarraSuperiorComponent, BotaoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
