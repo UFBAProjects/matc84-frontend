@@ -1,5 +1,5 @@
 <form [formGroup]="loginForm" (submit)="login()" autocomplete="new-password">
-  <div class="form-control">
+  <!-- <div class="form-control">
     <label for="email">Email</label>
     <input
       formControlName="email"
@@ -19,5 +19,46 @@
     />
   </div>
 
-  <button type="submit">Login &#8594;</button>
+  <button type="submit">Login &#8594;</button> -->
+
+  <mat-card>
+    <mat-card-title class="titulo-login">Login</mat-card-title>
+    <mat-card-content class="card-content">
+      <form
+        [formGroup]="loginForm"
+        (submit)="login()"
+        autocomplete="new-password"
+      >
+        <p>
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              placeholder="Username"
+              formControlName="username"
+            />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input
+              type="password"
+              matInput
+              placeholder="Password"
+              formControlName="password"
+            />
+          </mat-form-field>
+        </p>
+
+        <!-- <p *ngIf="error" class="error">
+          {{ error }}
+        </p> -->
+
+        <div class="button">
+          <button type="submit" mat-button>Login</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </form>
