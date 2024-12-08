@@ -1,0 +1,50 @@
+<ng-container>
+  <a>
+    <mat-card
+      class="card flex cursor-pointer flex-col items-center justify-center p-3 dark:bg-[#121212]"
+      ngFilmpireIntersectionObserver
+    >
+      <div
+        class="flex h-[320px] w-[208px] items-center justify-center rounded-xl"
+      >
+        <span class="loader dark:after:bg-red-600"></span>
+        <img
+          class="absolute rounded object-cover hover:scale-[1.05]"
+          src = "https://image.tmdb.org/t/p/w342"
+          width="208"
+          height="320"
+          loading="lazy"
+          alt="poster"
+        />
+      </div>
+      <mat-card-content
+        class="mat-card-content flex flex-col flex-nowrap items-center justify-center"
+      >
+        <div class="mt-4 flex w-full justify-between self-start px-4">
+          <span class="text-gray-500">{{
+            (isMovie(media) ? media.release_date : media.first_air_date)
+              | date : 'yyyy'
+          }}</span>
+          <span
+            class="mr-2 rounded bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+            >{{ (isMovie(media) ? 'movie' : 'tv') | uppercase }}</span
+          >
+        </div>
+        <h5
+          #mediaTitle
+          class="mb-0 mt-3 w-56 overflow-hidden text-ellipsis whitespace-nowrap px-4 text-center text-xl font-medium"
+          [matTooltip]="isMovie(media) ? media.title : media.name"
+          [matTooltipDisabled]="
+            mediaTitle.scrollWidth <= mediaTitle.clientWidth
+          "
+        >
+          {{ isMovie(media) ? media.title : media.name }}
+        </h5>
+        <span
+          [attr.data-star]="(media.vote_average / 10) * 5 | number : '1.1-1'"
+          matTooltip="{{ media.vote_average | number : '1.1-1' }}"
+        ></span>
+      </mat-card-content>
+    </mat-card>
+  </a>
+</ng-container>
