@@ -7,15 +7,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { TelaCadastroUsuarioComponent } from './tela-cadastro-usuario/tela-cadastro-usuario.component';
+import { TelaCadastroUsuarioComponent } from './view/tela-cadastro-usuario/tela-cadastro-usuario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
-import { BotaoComponent } from './barra-superior/botao/botao.component';
+import { BarraSuperiorComponent } from './shared/barra-superior/barra-superior.component';
+import { BotaoComponent } from './shared/botao/botao.component';
+import { ListagemFilmesComponent } from './view/listagem-filmes/listagem-filmes.component';
+import { TileFilmeComponent } from './shared/tile-filme/tile-filme.component';
 
 @NgModule({
-  declarations: [AppComponent, TelaCadastroUsuarioComponent, BarraSuperiorComponent, BotaoComponent],
+  declarations: [
+    AppComponent,
+    TelaCadastroUsuarioComponent,
+    BarraSuperiorComponent,
+    BotaoComponent,
+    ListagemFilmesComponent,
+    TileFilmeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
