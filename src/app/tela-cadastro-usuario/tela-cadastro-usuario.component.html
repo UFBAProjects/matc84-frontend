@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" (submit)="login()" autocomplete="new-password">
+
   <!-- <div class="form-control">
     <label for="email">Email</label>
     <input
@@ -21,44 +21,38 @@
 
   <button type="submit">Login &#8594;</button> -->
 
-  <mat-card>
-    <mat-card-title class="titulo-login">Login</mat-card-title>
-    <mat-card-content class="card-content">
-      <form
-        [formGroup]="loginForm"
-        (submit)="login()"
-        autocomplete="new-password"
-      >
-        <p>
-          <mat-form-field>
-            <input
-              type="text"
-              matInput
-              placeholder="Username"
-              formControlName="username"
-            />
-          </mat-form-field>
-        </p>
 
-        <p>
-          <mat-form-field>
-            <input
-              type="password"
-              matInput
-              placeholder="Password"
-              formControlName="password"
-            />
-          </mat-form-field>
-        </p>
 
-        <!-- <p *ngIf="error" class="error">
-          {{ error }}
-        </p> -->
 
-        <div class="button">
-          <button type="submit" mat-button>Login</button>
-        </div>
-      </form>
-    </mat-card-content>
-  </mat-card>
-</form>
+<div class="tela">
+  <div class="loginComponente">
+    <p>{{!ehLogin ? 'Entre com sua conta' : 'Se cadastre'}}</p>
+    <p *ngIf="!ehLogin"  style="font-weight: 100; color: #000; font-size: 1rem;">Para aproveitar todos os recursos do site, será necessário realizar o login. Se não tem conta ativa, por favor realize o <a href="/cadastro">cadastro.</a></p>
+    <p *ngIf="ehLogin"  style="font-weight: 100; color: #000; font-size: 1rem;">Se cadastre para acessar seu catálogo de filmes prediletos!</p>
+    <form [formGroup]="loginForm" (submit)="login()" autocomplete="new-password">
+
+      <label *ngIf="ehLogin" for="nome">Nome</label>
+      <input formControlName="nome" *ngIf="ehLogin" type="text" id="nome"/>
+      <div class="validacao" *ngIf="loginForm.get('nome')?.touched && loginForm.get('nome')?.invalid">
+        <small>O nome é obrigatório.</small>
+      </div>
+
+      <label for="username">Email</label>
+      <input formControlName="username" type="text" id="username"/>
+      <div class="validacao" *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid">
+        <small>O email é obrigatório.</small>
+      </div>
+      
+      <label for="password">Senha</label>
+      <input formControlName="password" type="password" id="password"/>
+      <div class="validacao" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+        <small>A senha é obrigatória.</small>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <button type="submit">Entrar</button>
+      </div>
+    </form>
+  </div>
+</div>
+

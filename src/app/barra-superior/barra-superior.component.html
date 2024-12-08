@@ -1,12 +1,14 @@
 <div class="tool-bar-container">
   <div class="nav-container">
-    <app-botao
+    <h1 (click)="mudarRota('cadastro')" class="nomeApp">MOVIE TRACK</h1>
+    <div style="display: flex; flex-direction: row; width: 8%; justify-content: space-between;">
+      <h1 *ngFor="let rota of rotas"  (click)="mudarRota(rota.path)" class="botaoLogin">{{rota.texto}}</h1>
+    </div>
+
+    <!-- <app-botao
       *ngFor="let rota of rotas"
       [text]="rota"
       (btnClick)="mudarRota(rota)"
-    ></app-botao>
-  </div>
-  <div class="titulo-pagina">
-    <h3>{{ tituloPagina }}</h3>
+    ></app-botao> -->
   </div>
 </div>

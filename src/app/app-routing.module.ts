@@ -4,7 +4,8 @@ import { TelaCadastroUsuarioComponent } from './tela-cadastro-usuario/tela-cadas
 
 const routes: Routes = [
   { path: 'cadastro', component: TelaCadastroUsuarioComponent },
-  { path: '', redirectTo: '/cadastro', pathMatch: 'full' },
+  { path: 'login', component: TelaCadastroUsuarioComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({

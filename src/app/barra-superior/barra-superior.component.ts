@@ -7,17 +7,22 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./barra-superior.component.scss'],
 })
 export class BarraSuperiorComponent {
+
   constructor(private router: Router) {}
-  rotas = this.router.config.map((route: Route) => route?.path || 'Home');
+  //rotas = this.router.config.map((route: Route) => route?.path || 'Home');
   tituloPagina = 'Home';
+
+  rotas: rotas[] = [{path: '/cadastro', texto: 'CADASTRO'}, {path: '/login', texto: 'LOGIN'}];
 
   ngOnInit(): void {
     console.log(this.rotas);
   }
 
   mudarRota(route: string): void {
-    this.tituloPagina = route;
-    const proxCaminho = route === 'Home' ? '/' : route;
-    this.router.navigate([proxCaminho]);
+    this.router.navigate([route]);
   }
+}
+interface rotas {
+  path: string;
+  texto: string;
 }
