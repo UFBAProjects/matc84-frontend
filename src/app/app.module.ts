@@ -15,6 +15,7 @@ import { BarraSuperiorComponent } from './barra-superior/barra-superior.componen
 import { BotaoComponent } from './barra-superior/botao/botao.component';
 import { CardFilmeComponent } from './card-filme/card-filme.component';
 
+
 @NgModule({
   declarations: [AppComponent, TelaCadastroUsuarioComponent, BarraSuperiorComponent, BotaoComponent, CardFilmeComponent],
   imports: [

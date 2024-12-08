@@ -1,7 +1,7 @@
-import { Filme, SerieTV } from "../filme/filme.model";
+import { Filme} from "../filme/filme.model";
 
 export type SearchMedia = {
-  media_type: 'filme' | 'serie';
+  media_type: 'filme'
 };
 
-export type SearchResults = Filme | SerieTV ;
+export type SearchResults = Filme;
