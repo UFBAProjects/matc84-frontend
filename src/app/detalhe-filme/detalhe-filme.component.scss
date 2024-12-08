@@ -1,0 +1,26 @@
+.detalhe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem 7rem;
+  color: whitesmoke;
+  font-weight: 700;
+
+  margin: 0 auto;
+}
+
+.container-info {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  align-items: center;
+
+
+}
+
+.sobre-filme {
+  border-radius: 15px;
+  box-shadow: 1px 1px 2px 2px whitesmoke;
+  width: 70%;
+}

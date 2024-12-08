@@ -14,10 +14,11 @@ import { MatCardModule } from '@angular/material/card';
 import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
 import { BotaoComponent } from './barra-superior/botao/botao.component';
 import { CardFilmeComponent } from './card-filme/card-filme.component';
+import { DetalheFilmeComponent } from './detalhe-filme/detalhe-filme.component';
 
 
 @NgModule({
-  declarations: [AppComponent, TelaCadastroUsuarioComponent, BarraSuperiorComponent, BotaoComponent, CardFilmeComponent],
+  declarations: [AppComponent, TelaCadastroUsuarioComponent, BarraSuperiorComponent, BotaoComponent, CardFilmeComponent, DetalheFilmeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
