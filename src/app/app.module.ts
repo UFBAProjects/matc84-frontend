@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
 import { BotaoComponent } from './barra-superior/botao/botao.component';
 import { CardFilmeComponent } from './card-filme/card-filme.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, TelaCadastroUsuarioComponent, BarraSuperiorComponent, BotaoComponent, CardFilmeComponent],
@@ -26,10 +27,11 @@ import { CardFilmeComponent } from './card-filme/card-filme.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatCardModule,
+    HttpClientModule,
     MatInputModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [/*{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }*/],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

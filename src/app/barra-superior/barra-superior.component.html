@@ -1,10 +1,13 @@
 <div class="tool-bar-container">
   <div class="nav-container">
     <h1 (click)="mudarRota('cadastro')" class="nomeApp">MOVIE TRACK</h1>
-    <div style="display: flex; flex-direction: row; width: 8%; justify-content: space-between;">
+    <div *ngIf="!usuarioLogado"style="display: flex; flex-direction: row; width: 8%; justify-content: space-between;">
       <h1 *ngFor="let rota of rotas"  (click)="mudarRota(rota.path)" class="botaoLogin">{{rota.texto}}</h1>
     </div>
-
+    <div *ngIf="usuarioLogado"style="display: flex; flex-direction: row; width: 8%; justify-content: space-between;">
+      <h1 class="botaoLogin">Olá, {{usuarioLogado.nome}}!</h1>
+      <h1 (click)="deslogar()" class="botaoLogin">Deslogar</h1>
+    </div>
     <!-- <app-botao
       *ngFor="let rota of rotas"
       [text]="rota"
