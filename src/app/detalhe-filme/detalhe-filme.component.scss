@@ -23,12 +23,11 @@
   max-width: 100%;
   align-items: center;
 
-
 }
 
-.filme-detalhe {
 
-}
+
+
 
 .sobre-filme {
   border-radius: 15px;
@@ -76,4 +75,22 @@
 .filme-detalhe
 h2 {
   font-size: 2rem;
+}
+
+
+
+@media (min-width: 365px) and (max-width: 768px) {
+
+  .container-info {
+    flex-direction: column;
+  }
+
+  .sobre-filme {
+    width: 100%;
+  }
+
+  .info-filme {
+    width: 100%;
+  }
+
 }
