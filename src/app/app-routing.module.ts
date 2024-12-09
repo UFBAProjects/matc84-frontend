@@ -6,6 +6,7 @@ import { UsuarioAutenticadoGuard } from './services/Guards/Usuario-autenticado/u
 import { CardFilmeComponent } from './card-filme/card-filme.component';
 import { DetalhamentoFilmeComponent } from './detalhamento-filme/detalhamento-filme.component';
 import { ListarFilmesComponent } from './listar-filmes/listar-filmes.component';
+import { CadastroFilmeComponent } from './cadastro-filme/cadastro-filme.component';
 
 const routes: Routes = [
   {
@@ -33,8 +34,13 @@ const routes: Routes = [
     component: ListarFilmesComponent,
     canActivate: [UsuarioAutenticadoGuard],
   },
+  {
+    path: 'cadastro-filme',
+    component: CadastroFilmeComponent,
+    canActivate: [UsuarioAutenticadoGuard],
+  },
 
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/listagem', pathMatch: 'full' },
 ];
 
 @NgModule({

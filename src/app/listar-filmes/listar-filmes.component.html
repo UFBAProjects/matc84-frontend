@@ -1,5 +1,6 @@
+<a href="/cadastro-filme">tester</a>
 <div class="wrapper-tela-listar-filmes">
-  <div class="wrapper-lista-filmes">
+  <div *ngIf="filmes" class="wrapper-lista-filmes">
     <app-tile-filme
       *ngFor="let filme of filmes"
       [filme]="filme"

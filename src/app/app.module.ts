@@ -20,6 +20,8 @@ import { DetalhamentoFilmeComponent } from './detalhamento-filme/detalhamento-fi
 import { MatDialogModule } from '@angular/material/dialog';
 import { ExcluiFilmeComponent } from './exclui-filme/exclui-filme.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CadastroFilmeComponent } from './cadastro-filme/cadastro-filme.component';
+import { TokenInterceptor } from './services/interceptor/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     TileFilmeComponent,
     DetalhamentoFilmeComponent,
     ExcluiFilmeComponent,
+    CadastroFilmeComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     MatDialogModule,
   ],
   providers: [
-    /*{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }*/
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })

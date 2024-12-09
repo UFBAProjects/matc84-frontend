@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { IFilme } from '../models/IFilme';
 import { Router } from '@angular/router';
 import { SharedService } from '../services/shared.service';
+import { UsuarioServiceService } from '../services/Usuario/usuario-service.service';
+import { ICadastroUsuarioResponse } from '../interfaces-api/src/usuario/IUsuario.model';
 
 @Component({
   selector: 'app-listar-filmes',
@@ -9,8 +11,13 @@ import { SharedService } from '../services/shared.service';
   styleUrls: ['./listar-filmes.component.scss'],
 })
 export class ListarFilmesComponent implements OnInit {
-  constructor(private router: Router, private sharedService: SharedService) {}
+  constructor(
+    private router: Router,
+    private sharedService: SharedService,
+    private UsuarioService: UsuarioServiceService
+  ) {}
   filmes: IFilme[] = [];
+  usuario: ICadastroUsuarioResponse = {} as ICadastroUsuarioResponse;
   // filmes: IFilme[] = [
   //   {
   //     titulo: 'Moana',
@@ -30,7 +37,14 @@ export class ListarFilmesComponent implements OnInit {
   //   },
   // ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.usuario = this.UsuarioService.obterUsuarioLogado;
+    this.sharedService
+      .carregarListaFilmes(this.usuario)
+      .subscribe((res: IFilme[]) => {
+        this.filmes = res;
+      });
+  }
 
   navegar(filme: IFilme) {
     this.sharedService.salvarFilme(filme);
