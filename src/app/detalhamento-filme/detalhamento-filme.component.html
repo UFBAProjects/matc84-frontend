@@ -1,0 +1,28 @@
+<button class="btn" (click)="voltar()">VOLTAR</button>
+
+<div>
+  <div class="detalhe-container">
+    <div class="filme-detalhe">
+      <div>
+        <h2>{{ filme.titulo }}</h2>
+      </div>
+
+      <div class="container-info">
+        <img [src]="filme.capa" />
+        <div class="sobre-filme">
+          <!--  <GenreList [genres]="genres"></GenreList> -->
+          <p>Descricao do filme</p>
+          <p>{{ filme.descricao }}</p>
+        </div>
+
+        <aside class="info-filme">
+          <h3>Mais informações</h3>
+          <ul>
+            <li>Ano de lançamento: {{ filme.anoLancamento }}</li>
+            <li>Gênero: {{ filme.genero }}</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>

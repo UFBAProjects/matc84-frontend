@@ -14,9 +14,24 @@ import { MatCardModule } from '@angular/material/card';
 import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
 import { BotaoComponent } from './barra-superior/botao/botao.component';
 import { CardFilmeComponent } from './card-filme/card-filme.component';
+import { ListarFilmesComponent } from './listar-filmes/listar-filmes.component';
+import { TileFilmeComponent } from './listar-filmes/tile-filme/tile-filme.component';
+import { DetalhamentoFilmeComponent } from './detalhamento-filme/detalhamento-filme.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ExcluiFilmeComponent } from './exclui-filme/exclui-filme.component';
 
 @NgModule({
-  declarations: [AppComponent, TelaCadastroUsuarioComponent, BarraSuperiorComponent, BotaoComponent, CardFilmeComponent],
+  declarations: [
+    AppComponent,
+    TelaCadastroUsuarioComponent,
+    BarraSuperiorComponent,
+    BotaoComponent,
+    CardFilmeComponent,
+    ListarFilmesComponent,
+    TileFilmeComponent,
+    DetalhamentoFilmeComponent,
+    ExcluiFilmeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,6 +43,7 @@ import { CardFilmeComponent } from './card-filme/card-filme.component';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

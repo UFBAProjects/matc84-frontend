@@ -1,0 +1,9 @@
+<div class="wrapper-tela-listar-filmes">
+  <div class="wrapper-lista-filmes">
+    <app-tile-filme
+      *ngFor="let filme of filmes"
+      [filme]="filme"
+      (click)="navegar(filme)"
+    ></app-tile-filme>
+  </div>
+</div>
