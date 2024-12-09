@@ -15,9 +15,11 @@ import { BarraSuperiorComponent } from './barra-superior/barra-superior.componen
 import { BotaoComponent } from './barra-superior/botao/botao.component';
 import { CardFilmeComponent } from './card-filme/card-filme.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CadastroFilmeComponent } from './cadastro-filme/cadastro-filme.component';
+import { TokenInterceptor } from './services/interceptor/token.interceptor';
 
 @NgModule({
-  declarations: [AppComponent, TelaCadastroUsuarioComponent, BarraSuperiorComponent, BotaoComponent, CardFilmeComponent],
+  declarations: [AppComponent, TelaCadastroUsuarioComponent, BarraSuperiorComponent, BotaoComponent, CardFilmeComponent, CadastroFilmeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,7 +33,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     MatInputModule,
     MatButtonModule,
   ],
-  providers: [/*{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }*/],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

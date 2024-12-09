@@ -17,7 +17,7 @@ export class TelaCadastroUsuarioComponent implements OnInit {
   constructor(private router: Router, private fb: FormBuilder, private usuarioService: UsuarioServiceService, private emitirEvento: EmitirEventoService) {
 
   }
-  value: string | undefined;
+ 
   loginForm!: FormGroup;
 ngOnInit(): void {
   this.loginForm = this.fb.group({
@@ -78,11 +78,11 @@ ngOnDestroy(): void {
     }
   }
 
-  cadastrarUsuario(usuario: ICadastroUsuarioRequest): Promise<ICadastroUsuarioResponse> { 
-    return lastValueFrom(this.usuarioService.cadastrarUsuario(usuario));
+  async cadastrarUsuario(usuario: ICadastroUsuarioRequest): Promise<ICadastroUsuarioResponse> { 
+    return await lastValueFrom(this.usuarioService.cadastrarUsuario(usuario));
   }
 
-  loginDeUsuario(usuario: ILoginUsuarioRequest): Promise<ILoginUsuarioResponse> {
-    return lastValueFrom(this.usuarioService.loginUsuario(usuario));
+  async loginDeUsuario(usuario: ILoginUsuarioRequest): Promise<ILoginUsuarioResponse> {
+    return await lastValueFrom(this.usuarioService.loginUsuario(usuario));
   }
 }

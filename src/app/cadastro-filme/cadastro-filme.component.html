@@ -1,0 +1,42 @@
+<div class="tela">
+    <div class="loginComponente">
+      <p style="font-weight: 100; color: #000; font-size: 1rem;">Cadastre seu filme favorito!</p>
+      <form [formGroup]="loginForm" (submit)="aoClicarCadastrar()" autocomplete="new-password">
+  
+        <label for="titulo">Título</label>
+        <input formControlName="titulo" type="text" id="titulo"/>
+        <div class="validacao" *ngIf="loginForm.get('titulo')?.touched && loginForm.get('titulo')?.invalid">
+          <small>O título é obrigatório.</small>
+        </div>
+
+        <label for="genero">Gênero</label>
+        <input formControlName="genero" type="text" id="genero"/>
+        <div class="validacao" *ngIf="loginForm.get('genero')?.touched && loginForm.get('genero')?.invalid">
+          <small>O gênero é obrigatório.</small>
+        </div>
+
+        <label for="anoLancamento">Ano de lançamento</label>
+        <input formControlName="anoLancamento" type="text" id="anoLancamento"/>
+        <div class="validacao" *ngIf="loginForm.get('anoLancamento')?.touched && loginForm.get('anoLancamento')?.invalid">
+          <small>O ano de lançamento é obrigatório.</small>
+        </div>
+
+        <label for="descricao">Descrição</label>
+        <input formControlName="descricao" type="text" id="descricao"/>
+        <div class="validacao" *ngIf="loginForm.get('descricao')?.touched && loginForm.get('descricao')?.invalid">
+          <small>A descrição é obrigatória.</small>
+        </div>
+
+        <label for="capa">Título</label>
+        <input formControlName="capa" type="text" id="capa"/>
+        <div class="validacao" *ngIf="loginForm.get('capa')?.touched && loginForm.get('capa')?.invalid">
+          <small>A capa é obrigatória.</small>
+        </div>
+
+  
+        <div style="margin-top: 10px;">
+          <button type="submit">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
