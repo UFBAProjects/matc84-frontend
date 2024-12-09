@@ -19,6 +19,7 @@ import { TileFilmeComponent } from './listar-filmes/tile-filme/tile-filme.compon
 import { DetalhamentoFilmeComponent } from './detalhamento-filme/detalhamento-filme.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ExcluiFilmeComponent } from './exclui-filme/exclui-filme.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,11 +42,14 @@ import { ExcluiFilmeComponent } from './exclui-filme/exclui-filme.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatCardModule,
+    HttpClientModule,
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
   ],
-  providers: [],
+  providers: [
+    /*{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }*/
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
