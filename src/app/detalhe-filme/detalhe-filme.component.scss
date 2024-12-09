@@ -6,7 +6,14 @@
   color: whitesmoke;
   font-weight: 700;
 
+
   margin: 0 auto;
+}
+
+.container-info img {
+  width: fit-content;
+  max-width: 250px;
+  max-height: 50%;
 }
 
 .container-info {
@@ -19,8 +26,54 @@
 
 }
 
+.filme-detalhe {
+
+}
+
 .sobre-filme {
   border-radius: 15px;
   box-shadow: 1px 1px 2px 2px whitesmoke;
-  width: 70%;
+  width: 55%;
+  height: 300px;
+}
+
+.sobre-filme p {
+  padding: 2rem;
+}
+
+.elenco-filme {
+  display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+
+.filme-detalhe {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 2rem;
+
+}
+
+.info-filme {
+  height: 300px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.info-filme h3 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.filme-detalhe
+h2 {
+  font-size: 2rem;
 }
