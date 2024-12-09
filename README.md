@@ -3,7 +3,7 @@
 Bem-vindo ao **MovieTrack**, um projeto para cadastro e gerenciamento de filmes! Este é um sistema desenvolvido com **Angular 16** e planejado para ser executado via **Docker**.
 
 ## 📌 Protótipo  
-O protótipo do projeto está disponível no [Figma](https://www.figma.com/design/30fcypG8MCe0sSW7ZshWs6/MovieTrack---MATC84?node-id=0-1&t=nx2Ir6t4Q50tLXWw-1).  
+O esboço do prototipo do projeto está disponível no [Figma](https://www.figma.com/design/30fcypG8MCe0sSW7ZshWs6/MovieTrack---MATC84?node-id=0-1&t=nx2Ir6t4Q50tLXWw-1).  
 
 ## 🚀 Tecnologias Utilizadas  
 - **Angular 16**: [Documentação Oficial](https://angular.io/docs)  
