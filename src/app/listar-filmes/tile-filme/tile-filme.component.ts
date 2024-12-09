@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IFilme } from 'src/app/models/IFilme';
+import { Component, Input } from '@angular/core';
+import { IFilmeResponse } from 'src/app/interfaces-api/src/filme/filme.model';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-tile-filme',
@@ -7,7 +8,7 @@ import { IFilme } from 'src/app/models/IFilme';
   styleUrls: ['./tile-filme.component.scss'],
 })
 export class TileFilmeComponent {
-  @Input() filme: IFilme = {} as IFilme;
+  @Input() filme: IFilmeResponse = {} as IFilmeResponse;
 
-  constructor() {}
+  constructor(private SharedService: SharedService) {}
 }

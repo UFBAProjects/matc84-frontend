@@ -1,3 +1,3 @@
 export const URLPADRAO = {
-  urlPadrao: 'http://localhost:8080/',
+  urlPadrao: 'http://192.168.15.12:8080/', //'http://localhost:8080/',
 };

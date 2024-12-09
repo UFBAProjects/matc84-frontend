@@ -22,6 +22,7 @@ import { ExcluiFilmeComponent } from './exclui-filme/exclui-filme.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CadastroFilmeComponent } from './cadastro-filme/cadastro-filme.component';
 import { TokenInterceptor } from './services/interceptor/token.interceptor';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { TokenInterceptor } from './services/interceptor/token.interceptor';
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
+    MatIconModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
